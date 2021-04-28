@@ -520,6 +520,10 @@ header a {
   outline: 2px solid #f00;
 }
 
+.span-error {
+  color: #d13434;
+}
+
 /* form validation end */
 
 
