@@ -573,7 +573,8 @@ footer > div > div {
   display: flex;
 }
 
-.subscribe-form > div.form-ip {
+/* .subscribe-form > div.form-ip, */
+.s-ip-form {
   width:inherit;
   padding: 0;
   margin-right: 33px;
@@ -582,6 +583,14 @@ footer > div > div {
 .s-email-ip {
   padding: 15px;
   border: 2px solid #fff;
+}
+
+.s-form-ip {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #fff;
+  background-color: #121212;
+  color: #48d494;
 }
 
 footer .sec-para,
@@ -596,7 +605,8 @@ footer .sec-para,
   width: 49.57%; 
 }
 
-.subscribe-form > div > .form-ip { 
+/* .subscribe-form > div > .form-ip */
+.s-form-ip { 
   /* border: 0; */
   border-right: 2px solid #fff;
 }
