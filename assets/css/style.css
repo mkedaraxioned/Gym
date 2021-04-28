@@ -476,6 +476,8 @@ header a {
   display: none;
 }
 
+.s-span-error { display: none;}
+
 .form-top {
   display: flex;
   justify-content: space-between;
