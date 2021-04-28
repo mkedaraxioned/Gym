@@ -516,24 +516,24 @@
           <form class="contact-form">
             <div class="form-top">
               <div class="ip-fname">
-                <input type="text" placeholder="First name" data-attr="fname" class="fname-ip form-ip">
+                <input type="text" name="fname" placeholder="First name" data-attr="fname" class="fname-ip form-ip">
                 <span class="fname-error span-error">Add some name error</span>
               </div>
               <div class="ip-lname">
-                <input type="text" placeholder="Last name" data-attr="lname" class="lname-ip form-ip">
+                <input type="text" name="lname" placeholder="Last name" data-attr="lname" class="lname-ip form-ip">
                 <span class="lname-error span-error">Add some email error</span>
               </div>
             </div>
             <div class="ip-subject">
-              <input type="text" placeholder="Subject" data-attr="subject" class="subject-ip form-ip">
+              <input type="text" name="subject" placeholder="Subject" data-attr="subject" class="subject-ip form-ip">
               <span class="subject-error span-error">Add some email error</span>
             </div>
             <div class="ip-email">
-              <input type="email" placeholder="Email" data-attr="email" class="email-ip form-ip">
+              <input type="email" name="email" placeholder="Email" data-attr="email" class="email-ip form-ip">
               <span class="email-error span-error">Add some email error</span>
             </div>
             <div>
-              <textarea name="message" cols="50" rows="10" placeholder="Write your message here." data-attr="message" class="message-ip form-ip"></textarea>
+              <textarea name="message" name="message" cols="50" rows="10" placeholder="Write your message here." data-attr="message" class="message-ip form-ip"></textarea>
               <span class="message-error span-error">Add some message error</span>
             </div>    
             <div class="ip-submit">
@@ -580,9 +580,9 @@
             Lorem ipsum door nit °met, consectetur adipisicing Cult Nesciunt incidunt lure !us, architect°, Islumpuam, natus ?
           </p>
           <form class="subscribe-form">
-            <div class="form-ip">
-              <input type="email" name="email" placeholder="Email" data-attr="s-email" class="s-email-ip form-ip">
-              <span class="email-error"></span>
+            <div class="s-ip-form">
+              <input type="email" name="s-email" placeholder="Email" data-attr="s-email" class="s-email-ip s-form-ip">
+              <span class="s-email-error"></span>
             </div>
             <div>
               <input type="submit" value="SUBSCRIBE" class="s-submit-btn">
