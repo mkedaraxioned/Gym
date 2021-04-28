@@ -327,10 +327,6 @@ header a {
   /* color: #FFF; */
 }
 
-.dayitem:nth-of-type(n+2) {
-  display: none;
-}
-
 .daylist { margin-top: 46px; }
 
 .scheduleitem {
