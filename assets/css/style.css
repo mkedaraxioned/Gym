@@ -506,6 +506,25 @@ header a {
   font-weight: bold;
   font-size: 12px;
 }
+
+/* Form validation end */
+.hide-element {
+  display: none;
+}
+
+.show-element {
+  display: block;
+}
+
+.outline-red {
+  outline: 2px solid #f00;
+}
+
+/* form validation end */
+
+
+
+
 /*=================================
   main styling ends here
 =================================*/
