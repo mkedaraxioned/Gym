@@ -318,6 +318,21 @@ function s_validateForm(event) {
 
 // Tab filter
 
+var window_obj=$(window);
+window_obj.on("load",function(e) { 
+    // on load filter settings = monday
+    var tabitem=$(".dayitem");
+    var default_sel="monday";
+    $.each(tabitem,function(i,image){
+        if(!$(this).hasClass(default_sel)) {
+           $(this).addClass("hide-element");
+       }
+   });
+});
+
+   
+
+
     var filter=$(".day-filters");
     filter.on("click", function(e) {
     if(e.target && e.target.nodeName == "SPAN") {
