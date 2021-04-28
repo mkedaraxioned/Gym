@@ -154,7 +154,7 @@ function validateField() {
         err_span.html("Please enter "+data_attr); 
         err_span.addClass('show-element')
         $(this).addClass('outline-red');
-    }    
+    }
 }
 
 function validateForm(event) {
@@ -206,6 +206,116 @@ function validateForm(event) {
         }
     }
   }
+
+
+
+
+
+//   form validation 2
+var s_form = $(".subscribe-form");
+s_form.on('submit', s_validateForm);
+var s_form_ip=$('.s-form-ip');
+var s_inputs=['email'];
+var s_persons= {};
+var s_emailerr;
+var s_re_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+s_form_ip.each(function(){
+    $(this).on("input",s_validateField);
+});
+
+function s_validateField() {
+    // alert("s_fomr activated");
+    var s_input_data = $(this).val();
+    console.log("this inp="+s_input_data);
+    var s_data_attr=$(this).attr("data-attr");
+    console.log("data attr "+s_data_attr);
+    if(s_data_attr=="s-email")
+    {
+        var s_is_email=s_re_email.test(s_input_data);
+        var s_err_class='.'+s_data_attr+'-error';
+        var s_err_span=$(s_err_class);
+        if(!s_is_email) {
+            s_err_span.html("Please enter "+s_data_attr.substr(2)); //ch1
+            s_err_span.addClass('show-element');
+            $(this).addClass('outline-red');
+            s_emailerr=1;                  
+         }
+        else {
+            s_emailerr=0;
+
+             if(s_err_span.hasClass('show-element'))
+            {
+              s_err_span.removeClass('show-element');
+              s_err_span.addClass('hide-element');                  
+            }
+            if($(this).hasClass("outline-red"))
+            {
+                $(this).removeClass("outline-red");
+            }
+
+        }
+    }
+
+    if(s_input_data=="")
+    {
+        var s_err_class='.'+s_data_attr+'-error';
+        var s_err_span=$(s_err_class);
+        s_err_span.html("Please enter "+s_data_attr.substr(2)); 
+        s_err_span.addClass('show-element')
+        $(this).addClass('outline-red');
+    }
+}
+
+function s_validateForm(event) {
+    event.preventDefault();
+    s_form_ip.each(function(index){
+        s_persons[s_inputs[index]]=$(this).val();
+    });
+    var s_formFlag=0;
+
+    for(var i = 0 ; i < s_inputs.length; i++)
+    {   
+        if(s_persons[s_inputs[i]]=="")
+        {
+            var s_err_class='.'+s_inputs[i]+'-error';
+            var s_err_span=$(s_err_class);
+            s_err_span.html("Please enter "+s_inputs[i]); 
+            s_err_span.addClass('show-element');
+            var current_s_form_ip=$('.s-form-ip:nth-of-type('+i+')');
+            current_s_form_ip.addClass('outline-red');
+            s_formFlag=1; 
+        }
+    }
+    s_submitform();
+
+    function s_submitform(){
+
+        if((s_formFlag===0)&&(s_emailerr===0)) 
+        {
+          var s_span_err_shown=$(".s-span-error");
+          var s_form_ip=$('.s-form-ip');
+          s_span_err_shown.each(function(){
+            if($(this).hasClass('show-element'))
+            {
+                $(this).removeClass('show-element');
+                $(this).addClass('hide-element');                  
+            }
+        });
+        s_form_ip.each(function(){
+            if($(this).hasClass('outline-red'))
+            {
+                $(this).removeClass('outline-red');
+            }
+        });
+          var s_form_ip=$('.s-form-ip');
+        s_form_ip.each(function(){
+            $(this).val("");
+        });
+
+        }
+    }
+  }
+
 
 
   
