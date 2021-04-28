@@ -424,9 +424,9 @@ header a {
   background: #48d494;
 }
 
-.featureitem:nth-of-type(n+4) {
+/* .featureitem:nth-of-type(n+4) {
   display: none;
-}
+} */
 
 .feature-title {
   margin: 32px 0 0 18%;
