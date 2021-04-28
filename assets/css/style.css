@@ -324,6 +324,8 @@ header a {
 .tabs > span {
   padding:18px;
   display: inline-block;
+  cursor: pointer;
+  transition: ease .3s;
   /* color: #FFF; */
 }
 
@@ -332,6 +334,7 @@ header a {
 .scheduleitem {
   border: 1px solid #fff;
   display: flex;
+  transition: ease .5s;
   /* padding: 27px 20px; */
 }
 
