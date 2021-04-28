@@ -476,7 +476,10 @@ header a {
   display: none;
 }
 
-.s-span-error { display: none;}
+.s-span-error { 
+  display: none;
+  color: #ff0000;
+}
 
 .form-top {
   display: flex;
