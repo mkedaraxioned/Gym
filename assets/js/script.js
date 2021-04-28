@@ -102,7 +102,7 @@ $(document).ready(function() {
   start_counter4();   
   
   
-// form validation
+// form validation 1
 
 var form = $(".contact-form");
 form.on('submit', validateForm);
@@ -215,7 +215,7 @@ function validateForm(event) {
 var s_form = $(".subscribe-form");
 s_form.on('submit', s_validateForm);
 var s_form_ip=$('.s-form-ip');
-var s_inputs=['email'];
+var s_inputs=['s-email'];
 var s_persons= {};
 var s_emailerr;
 var s_re_email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -279,7 +279,7 @@ function s_validateForm(event) {
         {
             var s_err_class='.'+s_inputs[i]+'-error';
             var s_err_span=$(s_err_class);
-            s_err_span.html("Please enter "+s_inputs[i]); 
+            s_err_span.html("Please enter "+s_inputs[i].substr(2)); 
             s_err_span.addClass('show-element');
             var current_s_form_ip=$('.s-form-ip:nth-of-type('+i+')');
             current_s_form_ip.addClass('outline-red');
@@ -315,6 +315,72 @@ function s_validateForm(event) {
         }
     }
   }
+
+// Tab filter
+
+    var filter=$(".day-filters");
+    filter.on("click", function(e) {
+    if(e.target && e.target.nodeName == "SPAN") {
+    var x = $(".tabs");    
+    if(x.hasClass("bg-green"))
+    {
+    x.removeClass("bg-green");        
+    x.addClass("bg-black");
+    }
+      
+      var tabitem=$(".dayitem");
+      
+      tabitem.each(function(){
+        if($(this).hasClass("show-element"))
+        {
+          $(this).removeClass("show-element");
+        }
+        $(this).addClass("hide-element");
+      });
+
+
+    var classname_sel=e.target.className;
+    $.each(tabitem,function(i,image){
+       if($(this).hasClass(classname_sel)) {
+         if($(this).hasClass("hide-element")){
+          $(this).removeClass("hide-element");
+          $(this).addClass("show-element");
+      }
+      }
+  });
+
+  if( $(e.target).parent().hasClass("bg-black"))
+      {
+        $(e.target).parent().removeClass("bg-black");
+        $(e.target).parent().addClass("bg-green");
+      }
+    }  
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
