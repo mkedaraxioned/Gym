@@ -334,7 +334,6 @@ header a {
 .scheduleitem {
   border: 1px solid #fff;
   display: flex;
-  transition: ease .5s;
   /* padding: 27px 20px; */
 }
 
@@ -366,6 +365,7 @@ header a {
 }
 .dayitem {
   width: 100%;
+  transition: ease .7s;
 }
 
 .sec2-div4 {
