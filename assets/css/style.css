@@ -126,6 +126,7 @@ header > .wrapper {
 nav {
   margin-left: 5.14%;
   flex-basis: 29.20%;
+  display: flex;
 }
 
 .navbar {
@@ -733,9 +734,37 @@ footer h5 {
 
 .counter-item { margin-bottom: 25px; }
 
+.form-top {
+  flex-direction:column;
+}
+  
+.ip-fname, .ip-lname {
+  width: 100%;
+}
+  
+.ip-fname {
+  margin-bottom: 25px;
+}  
+
+
 }  
 
 @media screen and (max-width: 320px) {
+
+  .header-effect  {
+    background-color: #48d494;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hamburger-effect {
+    background-color: rgba(0, 0 , 0, 0.9);
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+    
   .navbar {
     justify-content: flex-end;
   }
