@@ -410,10 +410,10 @@ $('.class-list').slick({
         {
             breakpoint: 997,
             settings: {
-                arrows: true,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                adaptiveHeight: true
+                // adaptiveHeight: true
             }
         }
     ]
