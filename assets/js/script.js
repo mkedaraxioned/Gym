@@ -375,24 +375,49 @@ window_obj.on("load",function(e) {
 
 
 
+// sliders 
+$('.featurelist').slick({
+    dots: true,
+    autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    centerMargin: '40px',
+    autoplaySpeed: 2000,
+    arrows: false,
+    cssEase: 'ease',
+    responsive: [
+        {
+            breakpoint: 997,
+            settings: {
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('.class-list').slick({
+    dots: true,
+    autoplay: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    centerMargin: '40px',
+    autoplaySpeed: 2000,
+    arrows: false,
+    cssEase: 'ease',
+    responsive: [
+        {
+            breakpoint: 997,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true
+            }
+        }
+    ]
+});
 
 
 
