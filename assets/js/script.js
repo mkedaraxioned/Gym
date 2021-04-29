@@ -1,57 +1,45 @@
 /* Author: 
 
 */
+$(document).ready(function() {
+// Hamburger menu
+var cross=$( ".cross" );
+var hamburger=$( ".hamburger" );
+var html_tag=$("html");
+var header_tag=$("header");
+var navbar_li=$(".navbar li");
+var navbar = $(".navbar");
+var nav_tag=$( ".nav:first-of-type" );
+// hamburger
+cross.hide();
+hamburger.click(function() {
+    cross.show();
+    $(this).hide();
+    navbar.toggleClass("hamburger-menu");  
+  navbar_li.each(function(){
+      $(this).toggleClass("hide-menu-item");
+    });
+    header_tag.toggleClass("header-effect");
+    html_tag.toggleClass("no-scroll");
+    nav_tag.slideToggle( "slow");
+  });
 
-// hamburger menu
-var menu_state=0;
-var hamburger =$(".menu-bar");
-hamburger.on("click",toggleMobileMenu);
-var navbar=$(".navbar");
-var toggle_btn = $(".toggle-btn");
-var toggle = $(".toggle");
-var down_arrow = $(".hide-menu-item:nth-of-type(4)::after");
-toggle_btn.on({
-    mouseenter: function() {
-        toggle.removeClass( "inactive" );
-      }, mouseleave: function() {
-        toggle.addClass( "inactive" );
-        down_arrow.removeClass("inactive");
-      }
+  cross.click(function() {
+    cross.hide();
+    hamburger.show();
+    navbar.toggleClass("hamburger-menu");
+      navbar_li.each(function(){
+        $(this).toggleClass("hide-menu-item");
+      });
+      header_tag.toggleClass("header-effect");
+      html_tag.toggleClass("no-scroll");
+      nav_tag.slideToggle( "slow");
 });
 
-var all_menu_items = $(".navbar li");
-function toggleMobileMenu(e) {
-    console.log("menu state ="+menu_state);
-  if(menu_state===0) {
-    navbar.addClass("hamburger-menu");
-    
-    all_menu_items.each(function(){
-        if($(this).hasClass("hide-menu-item"))
-        {
-            $(this).removeClass("hide-menu-item");
-          }
-      });
-      
-      menu_state=1;
-  }
-  else if(menu_state===1) {
-      navbar.removeClass("hamburger-menu");
-      var all_menu_items_recent = $(".navbar li");
-              all_menu_items_recent.each(function(){
-                  if(!$(this).hasClass("hide-menu-item"))
-                  {
-                      $(this).addClass("hide-menu-item");
-                  }
-              });
-              hamburger.removeClass("hide-menu-item");
-              menu_state=0;
-              
-          }        
-      }
 
 
 // counter 
-$(document).ready(function() {
+
     var counter1 = $(".counter1");
     var counter2 = $(".counter2");
     var counter3 = $(".counter3");
