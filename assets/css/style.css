@@ -705,6 +705,8 @@ footer > div > div { flex-wrap: wrap; }
   font-size: calc(10vw);
 }
 
+.section1-img > img { height: 360px; }
+
 .featureitem {
   margin: 0;
   border: 0;
