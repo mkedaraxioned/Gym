@@ -610,7 +610,7 @@ footer h5 {
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
 /* .section1-title {  font-size: 66px; } */
 
 .navbar-right {   visibility: hidden; }
