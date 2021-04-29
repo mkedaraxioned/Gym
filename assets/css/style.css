@@ -705,6 +705,11 @@ footer > div > div { flex-wrap: wrap; }
   font-size: calc(10vw);
 }
 
+.featureitem {
+  margin: 0;
+  border: 0;
+}
+
 .sec2-div1 { flex-direction: column; }
 
 .sec2-div1-left { margin-bottom: 50px; }
@@ -733,6 +738,8 @@ footer > div > div { flex-wrap: wrap; }
 .schedulespan {   border-bottom: 1px solid #fff; }
 
 .section3 > div { width: 80%; }
+
+
 
 }
 
